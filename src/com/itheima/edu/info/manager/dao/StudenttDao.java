@@ -3,9 +3,9 @@ package com.itheima.edu.info.manager.dao;
 import com.itheima.edu.info.manager.domain.Student;
 
 public class StudenttDao {
+    //1.创建学生对象数组
+    private static Student[] stus = new Student[5];
     public boolean addStudent(Student stu) {
-        //1.创建学生对象数组
-        Student[] stus = new Student[5];
         //2.添加学生到数组
         //2.1定义变量index为-1，假设数组已经全部存满，没有null的元素
         int index = -1;
@@ -27,5 +27,9 @@ public class StudenttDao {
             stus[index] = stu;
             return true;
         }
+    }
+
+    public Student[] findAllStudent() {
+        return stus;
     }
 }
